@@ -1,0 +1,234 @@
+* {
+box-sizing: border-box;
+}
+#headerdiv {
+  display: inline-block;
+  height: 200px;
+  animation: headeranimation 12s infinite;
+}
+@keyframes headeranimation {
+  30% {color: #ff1100;font-size: 60px;}
+}
+@keyframes hamsteroanimation {
+  0% {color: #ff0000;}
+  16% {color: #ffa500;}
+  32% {color: #ffff00;}
+  48% {color: #008000;}
+  64% {color: #0000ff;}
+  80% {color: #4b0082;}
+  100% {color: #ee82ee;}
+}
+#FAQDIV {
+  text-align: left;
+  margin: 30px;
+  padding: 10px;
+}
+#scroll-container {
+  border: transparent;
+  border-radius: 5px;
+  height: 50%;
+  overflow: hidden;
+}
+#scroll-text {
+  height: 200%;
+  text-align: center;
+  -moz-transform: translateY(200%);
+  -webkit-transform: translateY(200%);
+  transform: translateY(200%);
+  
+  -moz-animation: scrolltext 20s linear infinite;
+  -webkit-animation: scrolltext 20s linear infinite;
+  animation: scrolltext 30s linear infinite;
+  animation-delay: -7.5s;
+}
+@-moz-keyframes scrolltext {
+  from { -moz-transform: translateY(100%); }
+  to { -moz-transform: translateY(-100%); }
+}
+@-webkit-keyframes scrolltext {
+  from { -webkit-transform: translateY(100%); }
+  to { -webkit-transform: translateY(-100%); }
+}
+@keyframes scrolltext {
+  from {
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+body, html{
+  text-align: center;
+  font-family: helvetica;
+  color: #9c9c9c;
+  background-image: url("seaback.jpg"), linear-gradient(#380000, #750000, #380000);
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+}
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+h2.back {
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+p.question {
+  font-size: 16px;
+  font-weight: bold;
+}
+p.answer {
+  font-size: 16px;
+  font-weight:lighter;
+}
+p.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+p.warning {
+  font-size: 24px;
+  color: #00c6d9;
+}  
+p.warningtext {
+  font-size: 12px;
+  color: #00c6d9;
+}
+p.hamstero {
+  font-size: 40px;
+  display: inline-block;
+  animation: hamsteroanimation 0.5s infinite;
+}
+.menu {
+  margin: auto;
+}
+li {
+  list-style-type: none;
+}
+
+.continuebutton {
+  position: relative;
+  background-color: #303030;
+  border: 2px solid;
+  border-radius: 6px;
+  color: white;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.continuebutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.continuebutton:after {
+  content: "";
+  background: #ff1100;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -40px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s 
+}
+.continuebutton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+.continuebutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+.continuebutton:hover span {
+  padding-right: 20px;
+}
+.continuebutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button {
+  background-color: #303030;
+  border: 2px solid;
+  border-radius: 6px;
+  color: white;
+  padding: 8px;
+  width: 180px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+a.pixabaylink {
+  color:#c70000;
+}
+a.pixabaylink:hover{
+  color:#800000;
+}
+footer {
+  position: fixed;
+  background-color: black;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+input[type=text] {
+  border: 5px solid darkred;
+  border-radius: 10px;
+  height: 35px;
+}
+input[type=text]:focus {
+  background-color: #303030;
+  color: white;
+  border: 5px solid #575757;
+}
