@@ -14,8 +14,6 @@ box-sizing: border-box;
 }
 #forestboxback {
   background-image: linear-gradient(#034a00, #022b00, #010d00);
-  filter: alpha(opacity=90) 
-  -moz-opacity: 0.90;
   opacity: 0.90;
   position: absolute;
   top: 0;
@@ -31,9 +29,6 @@ box-sizing: border-box;
   text-align: center;
   margin: 10px;
   text-shadow: 2px 2px 12px green;
-  -webkit-text-fill-color: grey; 
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: darkgrey;
 }
 #forestboxtext {
   text-align: left;
@@ -42,8 +37,15 @@ box-sizing: border-box;
   width: 100%;
   height: 100%;
 }
+#forestboxtemp {
+  text-align: center;
+  position: relative;
+  color: #b5b5b5;
+  width: 100%;
+  height: 100%;
+}
 table {
-  overflow-x:auto
+  overflow-x:auto;
   empty-cells: hide;
   margin-left: auto;
   margin-right: auto;
@@ -72,8 +74,6 @@ table {
   transition-duration: 0.3s;
 }
 a.compassbutton {
-  -webkit-appearance: button;
-  -moz-appearance: button;
   appearance: button;
   text-decoration: none;
   color: #b5b5b5;
@@ -98,7 +98,7 @@ a.compassbutton:hover {
   color: #f70000;
 }
 body {
-  background-image: url('https://cdn.pixabay.com/photo/2018/05/12/17/41/forest-3394066_960_720.jpg');
+  background-image: url("../forest/forestbackground.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
